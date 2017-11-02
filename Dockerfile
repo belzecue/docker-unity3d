@@ -66,8 +66,8 @@ RUN mkdir -p /home/adminuser/.cache/unity3d && \
   mkdir -p /home/adminuser/.local/share/unity3d/Unity && \
   mkdir -p /home/adminuser/.local/share/unity3d/Certificates && \
   curl -O http://beta.unity3d.com/download/ee86734cf592/unity-editor_amd64-2017.2.0f3.deb && \
-  dpkg -i /unity-editor_amd64-5.6.0xf3Linux.deb && \
-  rm -f /unity-editor_amd64-5.6.0xf3Linux.deb
+  dpkg -i /unity-editor_amd64-2017.2.0f3.deb && \
+  rm -f /unity-editor_amd64-2017.2.0f3.deb
 
 ENV PATH "/opt/Unity/Editor/:${PATH}"
 
