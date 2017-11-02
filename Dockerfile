@@ -62,13 +62,9 @@ RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
 RUN useradd -u 12345 -g users -d /home/adminuser -s /bin/bash -p $(echo 1234 | openssl passwd -1 -stdin) adminuser
 
 # updated list of versions https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2
-# version used in this container: http://beta.unity3d.com/download/8bc04e1c171e/unity-editor_amd64-5.6.0xf3Linux.deb
-# 2017.2 (latest): http://beta.unity3d.com/download/ee86734cf592/unity-editor_amd64-2017.2.0f3.deb
-# N.B. in 2017.2 you can use --username [your username] --password [pass] --serial to activate seamlessly without
-# having to vnc to container
 RUN mkdir -p /home/adminuser/.cache/unity3d && mkdir -p /home/adminuser/.local/share/unity3d/Unity && \
   mkdir -p /home/adminuser/.local/share/unity3d/Certificates && \
-  curl -O http://beta.unity3d.com/download/8bc04e1c171e/unity-editor_amd64-5.6.0xf3Linux.deb && \
+  curl -O http://beta.unity3d.com/download/ee86734cf592/unity-editor_amd64-2017.2.0f3.deb && \
   dpkg -i /unity-editor_amd64-5.6.0xf3Linux.deb && \
   rm -f /unity-editor_amd64-5.6.0xf3Linux.deb
 
