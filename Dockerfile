@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER me@nenadg.com
+LABEL maintainer="me@nenadg.com"
 
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list && \
   apt-get -qq update && apt-get -qq install -y \
