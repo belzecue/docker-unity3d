@@ -1,15 +1,11 @@
-version: '2'
+version: "2"
+
 services:
   unity:
     build: .
-    ports:
-      - "5555:5555"
-      - "5900:5900"
     tty: true
-    environment:
-      VNC_PASSWORD: pass123
-      XFB_SCREEN: 1280x800x24
-      XFB_SCREEN_DPI: 150
+    env_file:
+      - .env
     volumes:
       - ./context:/context
     networks:
