@@ -66,7 +66,7 @@ RUN useradd -u 12345 -g users -d /home/adminuser -s /bin/bash -p $(echo 1234 | o
 RUN echo 'adminuser ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 # Set the installation package location (see https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2)
-ENV INSTALL_URL "http://beta.unity3d.com/download/ee86734cf592/unity-editor_amd64-2017.2.0f3.deb"
+ENV INSTALL_URL "https://beta.unity3d.com/download/ce9f6a0436e1+/unity-editor_amd64-2017.2.1f1.deb"
 
 # Install Unity
 # (1) Create directories required for Unity
